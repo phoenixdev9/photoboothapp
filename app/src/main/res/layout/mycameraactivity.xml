@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title at the top -->
+    <ImageView
+        android:id="@+id/topImageView"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Top Image"
+        android:src="@drawable/top_image" />
+
+    <!-- Camera preview in the middle -->
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="1200dp"
+        android:layout_height="1200dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="150dp"
+        android:contentDescription="Camera Preview"
+        android:rotationX="0" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textureView"
+        android:layout_marginTop="381dp"
+        android:contentDescription="Captured Image Preview"
+        android:scaleType="centerCrop" />
+
+    <!-- Alert number text view -->
+    <TextView
+        android:id="@+id/alertTextView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:textSize="100sp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:fontFamily="@font/kanitblackitalic"/>
+
+
+    <!-- Buttons at the bottom -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:contentDescription="Button 1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/capturebutton1" />
+
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:contentDescription="Button 2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/capturebutton2" />
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:contentDescription="Button 3"
+            android:scaleType="fitCenter"
+            android:src="@drawable/capturebutton3" />
+
+        <ImageButton
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:contentDescription="Button 4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/capturebutton4" />
+    </LinearLayout>
+</RelativeLayout>

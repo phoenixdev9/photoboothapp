@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <!-- Popup Container -->
+    <RelativeLayout
+        android:id="@+id/popupContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@drawable/popup_background"
+        android:padding="1dp">
+
+        <!-- Social Media Icon -->
+        <ImageView
+            android:id="@+id/socialIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_instagram_black_24dp" />
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/socialIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/kanitblack"
+            android:gravity="center"
+            android:text="ENTREZ VOS IDENTIFIANTS ICI POUR PUBLIER VOS PHOTOS !"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle Text -->
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/kanitregular"
+            android:gravity="center"
+            android:text="ENTER YOUR ID TO PUBLISH YOUR PICTURES!"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!-- ID Input Field -->
+        <EditText
+            android:id="@+id/idEditText_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitleText"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:hint="IDENTIFIANT"
+            android:textSize="16dp"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+
+        <!-- Password Input Field -->
+        <EditText
+            android:id="@+id/passwordEditText_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEditText_instagram"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:hint="MOT DE PASSE"
+            android:textSize="16dp"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <!-- OK Button -->
+        <Button
+            android:id="@+id/okButton_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText_instagram"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="OK"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Close Button (placed outside the popup container with negative margins) -->
+    <ImageButton
+        android:id="@+id/closeButton_instagram"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/popupContainer"
+        android:layout_alignEnd="@id/popupContainer"
+        android:layout_marginEnd="-15dp"
+        android:layout_marginTop="-15dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Close"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_close_black_24dp" />
+
+</RelativeLayout>

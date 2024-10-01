@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title at the top -->
+    <ImageView
+        android:id="@+id/topImageView"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Top Image"
+        android:src="@drawable/top_image" />
+
+    <!-- Placeholder for main content -->
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_width="393dp"
+        android:layout_height="470dp"
+        android:layout_above="@id/buttonContainer"
+        android:layout_below="@id/topImageView"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="62dp">
+
+        <!-- ImageView to display the GIF -->
+        <ImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="GIF ImageView"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+
+    <!-- Buttons at the bottom -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="394dp"
+        android:layout_height="89dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/buttonRetake"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="35dp"
+            android:background="@drawable/button_background1"
+            android:contentDescription="Retake Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/retake" />
+
+        <ImageButton
+            android:id="@+id/buttonShare"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="35dp"
+            android:background="@drawable/button_background1"
+            android:contentDescription="Share Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share" />
+
+        <ImageButton
+            android:id="@+id/buttonPrint"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_margin="35dp"
+            android:background="@drawable/button_background1"
+            android:contentDescription="Print Button"
+            android:scaleType="fitCenter"/>
+
+
+    </LinearLayout>
+
+    <!-- Popup for printing photos -->
+    <RelativeLayout
+        android:id="@+id/emailPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#80000000"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp"
+            android:background="@drawable/button_background1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/print_images"
+                android:contentDescription="print_images" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Popup for sharing options -->
+
+
+    <RelativeLayout
+        android:id="@+id/sharePopup"
+        android:layout_width="358dp"
+        android:layout_height="246dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/buttonTikTok"
+            android:layout_width="55dp"
+            android:layout_height="57dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_background1"
+            android:contentDescription="TikTok Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tiktok_icon" />
+
+        <!-- Facebook Button -->
+
+        <ImageButton
+            android:id="@+id/buttonInstagram"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-36dp"
+            android:layout_marginLeft="-36dp"
+            android:layout_marginBottom="59dp"
+            android:layout_toEndOf="@id/buttonTikTok"
+            android:layout_toRightOf="@id/buttonTikTok"
+            android:background="@drawable/button_background1"
+            android:contentDescription="Instagram Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/instagram_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonEmail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="59dp"
+            android:layout_toEndOf="@id/buttonInstagram"
+            android:layout_toRightOf="@id/buttonInstagram"
+            android:background="@drawable/button_background1"
+            android:contentDescription="Email Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/email_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonFacebook"
+            android:layout_width="66dp"
+            android:layout_height="58dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-35dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/buttonEmail"
+            android:layout_toRightOf="@id/buttonEmail"
+            android:background="@drawable/button_background1"
+            android:contentDescription="Facebook Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/facebook_icon" />
+    </RelativeLayout>
+
+    </RelativeLayout>

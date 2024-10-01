@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PhotoBoothApp</string>
+    <string name="photo">Take a Photo</string> <!-- Add this line -->
+</resources>
